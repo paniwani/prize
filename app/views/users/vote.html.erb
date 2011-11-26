@@ -1,0 +1,12 @@
+<ul>
+    <li>Click the green "Vote Now" button below</li>
+    <li>Type in the words displayed if necessary</li>
+    <li>After voting, enter your email address</li>
+</ul>
+
+<%= form_tag '/confirm', :id => 'emailform', :style => 'display:none;' do %>
+    <input type='text' name='email' id='email'/>
+    <%= image_submit_tag 'email_button.png', :id => "submit" %>
+<% end %>
+
+<iframe src="http://promoshq.wildfireapp.com/website/6/contests/171629/voteable_entries/37007273" id="votepage" width="1200px" height="1200px" scrolling="no" onload="increment_reload()"></iframe>
