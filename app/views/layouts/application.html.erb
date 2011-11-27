@@ -4,8 +4,27 @@
   <title>Prize</title>
   <meta name="description" content = "Win a free SanDisk 32 gb usb flash drive by voting for Weekly Eats in the Global Startup Battle.">
   <meta name="keywords" content ="free usb, free usb drive, free flash drive, free 32gb flash drive, free 32gb thumb drive, free 32gb usb flash drive, vote for global startup battle">	
+  <%= stylesheet_link_tag 	 "http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css" %> 
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  
+  <script type="text/javascript">
+	var a = 0;
+	function increment_reload()
+	{
+		a = ++a;
+		if(a >= 2)
+		{
+			var fr = document.getElementById("votepage");
+			fr.style.display="none";
+			
+			$("#emailbtn").removeClass('disabled');
+			$("#emailbtn").removeAttr('disabled');
+		}	
+	}
+  </script>
+
+  
   <%= csrf_meta_tags %>
 </head>
 <body>

@@ -7,16 +7,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-var a = 0;
-function increment_reload()
-{
-	a = ++a;
-	if(a >= 2)
-	{
-		var fr = document.getElementById("votepage");
-		fr.style.display="none";
-		
-		var myform = document.getElementById("emailform");
-		myform.style.display="inline";
-	}	
-}

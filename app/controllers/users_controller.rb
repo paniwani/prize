@@ -85,6 +85,7 @@ class UsersController < ApplicationController
   end
   
   def confirm
-    User.create( :email => params[:email] )
+	@email = params[:email]
+    User.create( :email => @email )
   end
 end

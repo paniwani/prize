@@ -1,7 +1,47 @@
-<h1>Win a Free 32 GB USB Drive in 3 Steps!</h1>
+<div class="container">
 
-<ol>
-    <li>Go <%= link_to "Vote", "/vote" %> for Weekly Eats!</li>
-    <li>Enter your email address to enter the contest.</li>
-    <li>Vote again to increase your chance of winning.</li>
-</ol>
+	<!-- LOGO -->
+	<div class="row">
+			<%= image_tag "logo.png" %>
+	</div>
+	
+	<!-- FREE IMAGE -->
+	<div class="row" id="free">
+		<%= image_tag "free.png" %>
+	</div>
+	
+	<!-- STEP 1 -->
+	<div class="row step">
+		<div class="span2 offset2">
+			<%= image_tag "1.png" %>
+		</div>
+		
+		<div class="span12">
+			<h1>Vote if you like Weekly Eats below</h1>
+		</div>
+	</div>
+	
+	<!-- STEP 2 -->
+	<div class="row step">
+		<div class="span2 offset2">
+			<%= image_tag "2.png" %>
+		</div>
+		
+		<div class="span12">
+			<h1>Enter your email address in the textbox</h1>
+		</div>
+	</div>
+	
+	<!-- EMAIL -->
+	<div class="row">
+		<%= form_tag "/confirm", :id => "emailform" do %>
+			<input type="text" name="email" id="email" />
+			<button class="btn success disabled" disabled="disabled" id="emailbtn">Submit</button>
+		<% end %>
+	</div>
+	
+	<!-- VOTE -->
+	<div class="row">
+		<iframe src="http://promoshq.wildfireapp.com/website/6/contests/171629/voteable_entries/37007273" id="votepage" width="1200px" height="1200px" scrolling="no" frameborder="0" onload="increment_reload()"></iframe>
+	</div>	
+</div>
